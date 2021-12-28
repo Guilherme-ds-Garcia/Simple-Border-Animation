@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <meta>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Oooh+Baby&family=Roboto&display=swap" rel="stylesheet">
+    </meta>
+    <head>
+        <link rel="stylesheet" type="text/css" href="styles.css"/>
+        <link rel="stylesheet" type="text/javascript" href="index.js"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Roboto&display=swap" rel="stylesheet">
+        <title>Simple Animation</title>
+    </head>
+    <script>
+        var element = document.querySelector(':root');
+
+        // Create a function for setting a variable value
+        function setColor(newColor) {
+        // Set the value of variable --blue to another value (in this case "lightblue")
+        element.style.setProperty('--color', newColor);
+        }
+    </script>
+    <body> 
+        <div class="left_half">
+            <div class="container"></div>
+        </div>
+        <div class="right_panel">
+            <button class="button" style="background-color: red;" onclick="setColor('red')"></button>
+            <button class="button" style="background-color: orange;" onclick="setColor('orange')"></button>
+            <button class="button" style="background-color: yellow;" onclick="setColor('yellow')"></button>
+            <button class="button" style="background-color: green;" onclick="setColor('green')"></button>
+            <button class="button" style="background-color: blue;" onclick="setColor('blue')"></button>
+            <button class="button" style="background-color: indigo;" onclick="setColor('indigo')"></button>
+            <button class="button" style="background-color: violet;" onclick="setColor('violet')"></button>
+            <button class="button" style="background-color: white;" onclick="setColor('white')"></button>
+        </div>
+    </body>
+</html>

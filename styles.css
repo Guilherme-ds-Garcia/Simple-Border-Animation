@@ -1,0 +1,115 @@
+:root {
+    --color: white;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    background-color: rgb(46, 45, 45);
+}
+
+.right_panel {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+    border-radius: 20px 0 0 20px;
+    background: rgb(34, 33, 33); 
+    padding: 0 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    width: 60px;
+    height: 60px;
+    border-radius: 200px;      
+    box-shadow: 16px 14px 20px #0000008c;
+    border: 0;
+    cursor: pointer;
+}
+
+.button:hover {
+    transition-duration: 1s;
+    transform: scale(1.1);
+}
+
+.left_half {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: 400px;
+    box-shadow: 16px 14px 20px #0000008c;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.container::before {
+    content: "";
+    background-image: conic-gradient( var(--color) 10deg,transparent 100deg);
+    width: 150%;
+    height: 150%;
+    position: absolute;
+    animation: rotate 2s linear infinite;
+}
+
+.container::after {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    content: "Animated Container";
+    font-family: 'Oooh Baby', cursive;
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--color);
+    width: 380px;
+    height: 380px;
+    background: rgb(34, 33, 33);
+    border-radius: 20px;
+    position: absolute;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+@media (max-width: 700px) {
+    body {
+        height: 100vh;
+        flex-direction: column;
+    }
+
+    .left_half {
+        height: 100%;
+    }
+
+    .right_panel {
+        display: fixed;
+        right: 0px;
+        bottom: 0px;
+        left: 0;
+        flex-direction: row;
+        margin-top: 30px;
+        padding: 2rem 0.5rem;
+        column-gap: 15px;
+    }
+}
